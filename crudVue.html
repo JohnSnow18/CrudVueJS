@@ -13,45 +13,64 @@
 </head>
 
 <body>
-<div class="contenedor">
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
-        <img src="logo.png">
+    <div class="contenedor">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+            <img src="logo.png">
 
-        <a href="index.html" class="_2s25" accesskey="1">Principal</a>
-    </nav>
+            <a href="index.html" class="_2s25" accesskey="1">Principal</a>
+        </nav>
 
-    <div id="app">
+        <div id="app">
 
-        <div v-if="show_now==true">
-            <h1>Crear Nuevo Registro</h1>
-            <br>
-            <input type="text" placeholder="Ingrese su nombre" v-model="nombre">
-            <input type="text" placeholder="Ingrese su apellido" v-model="apellido">
-            <button type="button" class="btn btn-primary" @click="guardar">Guardar</button>
-            <button type="button" class="btn btn-primary" @click="show_now = false">Cancelar</button>
+            <div v-if="show_now==true">
+                <h1>Crear Nuevo Registro</h1>
+                <br>
+                <input type="text" placeholder="Ingrese su nombre" v-model="nombre">
+                <input type="text" placeholder="Ingrese su apellido" v-model="apellido">
+                <button type="button" class="btn btn-primary" @click="guardar">Guardar</button>
+                <button type="button" class="btn btn-primary" @click="show_now = false">Cancelar</button>
 
+            </div>
+
+
+            <div v-else="show_now==false">
+                <h1>Datos registrados</h1>
+                <button type="button" class="btn btn-primary" @click="show_now = true">Nuevo</button>
+                <br>
+                <table>
+                    <tr>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
         </div>
-
-
-        <div v-else="show_now==false">
-            <h1>Datos registrados</h1>
-            <button type="button" class="btn btn-primary" @click="show_now = true">Nuevo</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
             <br>
-            <table>
-                <tr>
-                    <th>Nombres</th>
-                    <th>Apellidos</th>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
-        </div>
+        </nav>
+
     </div>
-
-
-</div>
 
 
 
