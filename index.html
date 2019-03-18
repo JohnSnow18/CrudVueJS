@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>CrudVue</title>
+
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="imagen">
+            <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+                <img src="logo.png">
+
+                <a href="crudVue.html" class="_2s25" accesskey="1">Formulario</a>
+        </div>
+        </nav>
+
+        <h1 class="text-center">Utilizando el API Fethc <br>
+
+        </h1>
+
+        <div id="app">
+            <div id="contener" class="text-center">
+                <div id="nom">
+                    <h3>DATOS</h3>
+                </div>
+                <div id="ap">
+                    Su nombre es: {{nombre}}
+                    <br>
+                    Su apellido es: {{apellido}}
+                </div>
+                <div id="com">
+                    <b>{{nombre + " " + apellido}}</b>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <div id="centrar">
+                <div id="btnn">
+                    <h1 v-if="mostrar">Soy un texto oculto</h1>
+                    <h1 v-else>Soy un texto no oculto</h1>
+                </div>
+                <br>
+                <div id="boton">
+                    <button type="button" class="btn btn-primary" style="margin-left: 20%"
+                        @click="mostrar = !mostrar">Mostrar</button>
+                </div>
+                <br>
+                <br>
+                <br>
+            </div>
+
+            <div id="guar">
+                <h4>Ingresa su nombre</h4>
+                <input type="text" v-model="msg" placeholder="Ingrese tu Nombre">
+                <button type="button" class="btn btn-primary" @click="guardar">Guardar</button>
+
+                <h1>Escribiendo.. {{msg}}</h1>
+                <table>
+                    <tr>
+                        <th class="nombre">Nombre</th>
+                    </tr>
+                    <tr v-for=" item in lista ">
+                        <td>
+                            {{ item }}
+                        </td>
+                    </tr>
+                    <br>
+                </table>
+            </div>
+
+            <br>
+            <br>
+
+            <div id="list" class="text-center">
+                <div v-for="item in municipios">
+
+                    <!-- ul crea una lista no ordenada, Crea una caja: En bloque. Puede componer el elemento "li"  -->
+                    <li>
+                        {{ item }}
+                    </li>
+
+
+                </div>
+
+                <div v-for="persona in personas">
+
+                    <li>
+                        {{ persona.celular }}
+                    </li>
+
+                </div>
+            </div>
+
+            <br>
+
+
+
+
+
+            <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+                <br>
+            </nav>
+        </div>
+
+        <script src="vue.js"></script>
+        <script src="main.js"></script>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

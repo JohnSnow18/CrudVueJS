@@ -1,0 +1,54 @@
+.contenedor{
+    width: 80%;
+    max-width: 1000px; /* sirve para la pagina tenga un tamaño fijo(solo llegue hasta ahí) */
+    margin: 0 auto; /* para ajustar la pagina */
+    overflow: hidden;
+}
+
+#btnn{
+    border-style: solid;
+    margin-right: 40%;
+}
+
+#nom{
+    
+    border-style: solid;
+    margin-right: 60%;
+}
+
+#ap{
+    border-style: solid;
+    margin-right: 60%;
+}
+
+#com{
+    border-style: solid;
+    margin-right: 60%;
+}
+
+#contener{
+    margin-left: 38%
+}
+
+#centrar{
+    margin-left: 30%;
+}
+
+#colo{
+    background-color: aqua
+}
+
+#guar{
+margin-left: 40%
+}
+
+#boton{
+    margin-left: 5%;
+}
+
+#list{
+    border-style: groove;
+    width: 35%;
+    margin-left: 35%
+}
+
